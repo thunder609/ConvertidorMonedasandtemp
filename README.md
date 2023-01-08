@@ -29,6 +29,6 @@
 
 2.1 Calculo de Temperatura °F  a °C o viseversa
 
-![temperaturaclculo](https://user-images.githubusercontent.com/36831096/211220694-d018e756-4bf9-4639-ad31-78b5f3f7890c.png)
+
 
 
