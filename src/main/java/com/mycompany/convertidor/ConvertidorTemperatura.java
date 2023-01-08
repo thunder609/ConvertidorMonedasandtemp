@@ -9,22 +9,26 @@ package com.mycompany.convertidor;
  * @author oswaldo20
  */
 public class ConvertidorTemperatura {
-    double cantidad;
+    double temp;
     int temp1,temp2;
     double result;
 
     public ConvertidorTemperatura() {
     }
 
+    public double getTemp() {
+        return temp;
+    }
+
+    public void setTemp(double temp) {
+        this.temp = temp;
+    }
+
  
 
-    public double getCantidad() {
-        return cantidad;
-    }
+  
 
-    public void setCantidad(double cantidad) {
-        this.cantidad = cantidad;
-    }
+  
 
     public int getTemp1() {
         return temp1;
@@ -52,11 +56,22 @@ public class ConvertidorTemperatura {
     public Double  convertidorTemperaturea(){
       
         if (temp1==0  && temp2==0){
-         result=cantidad;  
+           result=temp; 
+        
         }
            else if (temp1==0  && temp2==1)
            {
-           result=(cantidad-32)* 5/9 ;           
+           result=((temp-32)* 5/9) ;   
+            //   result=temp; 
+           }
+           if (temp1==1  && temp2==1){
+           result=temp; 
+        
+        }
+           else if (temp1==1  && temp2==0)
+           {
+           result=((temp*1.800)+ 32) ;   
+            //   result=temp; 
            }
        return result;
     }   

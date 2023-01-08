@@ -39,7 +39,6 @@ public class Temperatura extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(720, 900));
 
         jLabel1.setFont(new java.awt.Font("Cantarell", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 102, 255));
@@ -47,7 +46,7 @@ public class Temperatura extends javax.swing.JFrame {
 
         jComboTemp1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fahrenheit", "Centigrados" }));
 
-        jComboTemp2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Centigrados", "Fahrenheit" }));
+        jComboTemp2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Fahrenheit", "Centigrados" }));
 
         jLabel2.setText("Ingrese Temperatura a Convertir");
 
@@ -176,7 +175,7 @@ public class Temperatura extends javax.swing.JFrame {
         int comb2 =jComboTemp2.getSelectedIndex();
         ConvertidorTemperatura T = new ConvertidorTemperatura();
         T.convertidorTemperaturea();
-        T.setCantidad(tempe);
+        T.setTemp(tempe);
         T.setTemp1(comb1);
         T.setTemp2(comb2);
   total.setText(String.valueOf(T.convertidorTemperaturea()));
